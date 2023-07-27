@@ -4,8 +4,21 @@
 # model remove the "{}" from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-# column: value
+category_entity_one:
+  category_id: 1
+  entity_id: 1
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+
+category_entity_two:
+  category_id: 2
+  entity_id: 1
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+
+category_entity_three:
+  category_id: 3
+  entity_id: 2
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+```
