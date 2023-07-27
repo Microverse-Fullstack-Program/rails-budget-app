@@ -6,8 +6,8 @@
 #
 user_one:
   name: User 1
-  email:
+  email: admin@localhost
 
 user_two:
   name: User 2
-  email:
+  email: user@localhost

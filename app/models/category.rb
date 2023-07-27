@@ -3,7 +3,7 @@ class Category < ApplicationRecord
   has_many :categories_entities, dependent: :destroy
   has_many :entities, through: :categories_entities
 
-  validates :name, presence: true, length: { maximum: 50 }
+  validates :name, presence: true, length: { minimum: 3, maximum: 60 }
   validates :icon, presence: true
 
   def self.default_icon
