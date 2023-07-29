@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :users
-  root "home#index"
 
   resources :categories do
     resources :entities
@@ -10,4 +8,6 @@ Rails.application.routes.draw do
     get 'logout', to: 'devise/sessions#destroy'
   end
 
+  devise_for :users
+  root "home#index"
 end
