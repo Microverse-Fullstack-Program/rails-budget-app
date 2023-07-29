@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  before_action :set_category, only: [:show, :edit, :update, :destroy]
+  before_action :set_category, only: %i[show edit update destroy]
   before_action :authenticate_user!
 
   def index
@@ -18,7 +18,7 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.new(category_params)
     @category.author_id = current_user.id
-   
+
     respond_to do |format|
       if @category.save
         format.html { redirect_to categories_path(@category.id), notice: 'Category was successfully created.' }
@@ -27,8 +27,8 @@ class CategoriesController < ApplicationController
       end
     end
   end
-  
-  def edit;  end
+
+  def edit; end
 
   # PATCH/PUT /categories/1 or /categories/1.json
   def update
@@ -42,7 +42,7 @@ class CategoriesController < ApplicationController
       end
     end
   end
-  
+
   # DELETE /categories/1 or /categories/1.json
   def destroy
     @category = Category.find(params[:id])
@@ -53,8 +53,8 @@ class CategoriesController < ApplicationController
         format.html { redirect_to categories_path, alert: 'Category was not destroyed.' }
       end
     end
-  end  
-  
+  end
+
   private
 
   def set_category
