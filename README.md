@@ -58,7 +58,7 @@ The Budget App is a web app developed with mobile-first approach that used for e
 ## Live Demo
 
 - [Live Demo](https://budget-tracker-pzur.onrender.com/)
-- [Project video Link](#)
+- [Project video Link](https://www.loom.com/share/752c6b57b76b42ea8b5528a24d00c47b?sid=39967d9d-27d2-4d08-ab28-12008daed00f)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
