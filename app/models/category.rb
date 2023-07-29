@@ -1,7 +1,6 @@
 class Category < ApplicationRecord
   belongs_to :author, class_name: 'User', foreign_key: 'author_id'
-  has_many :categories_entities, dependent: :destroy
-  has_many :entities, through: :categories_entities
+  has_many :entities, dependent: :destroy
 
   validates :name, presence: true, length: { minimum: 3, maximum: 60 }
   validates :icon, presence: true
@@ -10,7 +9,7 @@ class Category < ApplicationRecord
     'fas fa-question-circle'
   end
 
-  def total_amount
-    entities.sum(:amount)
+  def total_transactions
+    entities.where(category_id: id).sum(:amount).to_f
   end
 end
